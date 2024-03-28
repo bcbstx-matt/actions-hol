@@ -4,6 +4,11 @@ on:
     branches: [ main ]
     paths: [ hello-world-docker-action/** ]
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        type: environment
+        required: true
 
 jobs:
   test-action:
@@ -20,3 +25,5 @@ jobs:
 
       - name: Output time set in the container
         run: echo "The time was ${{ steps.hello-action.outputs.time }} when the action said hello"
+  
+  
