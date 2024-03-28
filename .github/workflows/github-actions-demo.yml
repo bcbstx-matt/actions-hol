@@ -11,7 +11,7 @@ on:
     inputs:
       environment:
         type: string
-        description" 'The environment to run the test on.'
+        description: 'The environment to run the test on.'
 
 jobs:
   Build:
